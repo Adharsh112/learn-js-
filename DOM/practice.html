@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Document Object Model</title>
+    </head>
+    <body>
+
+     <h1 class='title' id='first-title'>First Title</h1>
+     <h1 class='title' id='second-title'>Second Title</h1>
+     <h1 class='title' id='third-title'>Third Title</h1>
+     <h1></h1>
+
+    </body>
+    <script>
+        // syntax
+       const temp = document.getElementsByTagName('h1');
+       console.log(temp);
+       console.log(temp.length);
+
+// we need to convert html collection into an array for using forEach loop
+       Array.from(temp).forEach((element) => {
+          console.log(element);
+       }); 
+
+//   using getelement by className
+        console.log(document.getElementsByClassName('title'))
+
+// using element by id 
+
+    //   console.log(document.getElementById('third-title'))
+
+
+    //   query selector
+       const temp_selector = document.querySelector('title')
+      //  console.log(temp_selector);
+    //    query selector all 
+
+    let temp_selector2 = document.querySelectorAll('#first-title');
+
+    // adding attribute
+
+    const titles = document.querySelectorAll('h1');
+    
+    // forEach loop on nodeList
+    // titles.forEach((element) => {
+    //   console.log(element);
+    // });
+
+    titles[3].className = " title";
+    titles[3].id = "fourth-title";
+
+    titles[3].innerText = "fourth-title"
+    
+    // by using setAttribute
+    // titles[4].setAttribute('class','title');
+    // titles[4].setAttribute('id','fifth-title')
+    // titles[4].innerHTML('fifth-title')
+    const titles2 = document.querySelectorAll('.title');
+
+    titles2[4].classList.add('class','title');
+    titles2[4].id = 'fith-title';
+
+    titles2[4].innerContent('fifth-element');
+    
+       
+    </script>
+  </html>

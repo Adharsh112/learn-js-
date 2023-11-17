@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body style="background-color: bisque; color : black">
+    <h1>Events tutorial</h1>
+
+    <ul>
+        <li><img width ="200px" id= "sunflower" src = "https://images.unsplash.com/photo-1621948470827-d245077791aa?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            alt = ""></li>
+        <li><img width ="200px" id= "marigold" src = "https://media.istockphoto.com/id/496588947/photo/flowers.jpg?s=612x612&w=is&k=20&c=G4xOfF-6Mne8TpQ0CtUDKoOhClMKV1P9hFTkNIuiI8A="
+             alt = ""></li>
+        <li><img width ="200px" id= "lavender" src = "https://images.unsplash.com/photo-1588295723552-de31640feafc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             alt = ""></li>
+        <li><img width ="200px" id= "lotus" src = "https://media.istockphoto.com/id/579759878/photo/lotus-flower-buds-beautifully-arranged-over-white-background.jpg?s=612x612&w=is&k=20&c=cGP6vrJWWH5zIZjs2l-E2OC7dNAV8U73QEs1WNLZpEg=" 
+            alt = ""></li>
+    </ul>
+ </body>
+
+ <script>
+    // document.getElementById('marigold').onclick= function(){
+    //     alert("marigold is clicked");
+    // }
+// attachEvent
+// jQuery are used in the past
+    // document.getElementById('lavender').addEventListener('click',function(e){
+    //     console.log(e);
+    // },false) 
+    // type/timestamp/defaultPrevented,rarget,srcEelement are important
+    // clientX,clientY,screenX,screenY,
+    //altkey,ctrlkey,shiftkey,keycode
+
+   // Adding a click event listener to the element with ID 'ul'
+document.getElementById('ul').addEventListener('click', function(event) {
+    console.log("Clicked inside the ul");
+});
+
+// Adding a click event listener to the element with ID 'sunflower'
+document.getElementById('sunflower').addEventListener('click', function(event) {
+    alert("Sunflower is clicked");
+}, false);
+
+
+
+
+    
+
+ </script>
+ </html>
