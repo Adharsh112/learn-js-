@@ -36,36 +36,36 @@
     // }
 // attachEvent
 // jQuery are used in the past
-    // document.getElementById('lavender').addEventListener('click',function(e){
-    //     console.log(e);
-    // },false) 
+    document.getElementById('lavender').addEventListener('click',function(e){
+        console.log(e);
+    },false) 
     // type/timestamp/defaultPrevented,rarget,srcEelement are important
     // clientX,clientY,screenX,screenY,
     //altkey,ctrlkey,shiftkey,keycode
 
-//    // Adding a click event listener to the element with ID 'ul'
-// document.getElementById('images').addEventListener('click', function(event) {
-//     console.log("Clicked inside the ul");
-// },false);
+    // Adding a click event listener to the element with ID 'ul'
+ document.getElementById('images').addEventListener('click', function(event) {
+     console.log("Clicked inside the ul");
+ },false);
 
-// // Adding a click event listener to the element with ID 'sunflower'
-// document.getElementById('sunflower').addEventListener('click', function(event) {
-//     console.log("Sunflower is clicked");
-//     event.stopPropagation();
-// },false);
+ // Adding a click event listener to the element with ID 'sunflower'
+ document.getElementById('sunflower').addEventListener('click', function(event) {
+     console.log("Sunflower is clicked");
+     event.stopPropagation();
+ },false);
 
-// // prevent document
+ // prevent document
 
-//     document.getElementById('browser').addEventListener('click',function(event){
-//         console.log("the browser list is clicked ");
-//     })
+     document.getElementById('browser').addEventListener('click',function(event){
+        console.log("the browser list is clicked ");
+    })
 
 
-//     document.getElementById('google').addEventListener('click',function(event){
-//         event.preventDefault();
-//         console.log("google clicked");
-//         event.stopPropagation();
-//     },false);
+    document.getElementById('google').addEventListener('click',function(event){
+        event.preventDefault();
+        console.log("google clicked");
+        event.stopPropagation();
+    },false);
  
 
 // disapperaring images
@@ -79,9 +79,6 @@
         let removeIt = events.target.parentNode;
         removeIt.remove();// this can remove things
        }
-
-
-  
 
     },false);
     
