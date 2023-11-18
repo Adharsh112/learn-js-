@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>learning javascript</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    let sayAdharsh = function(){
+        console.log("Adharsh");
+    }
+    setTimeout(sayAdharsh,1000);
+
+    // changing the text inside the h1 tag using set time out
+    const changeTagText = ()=>{
+        document.querySelector('h1').innerHTML = 'learning Async javaScript';
+    }
+    
+   const stop_change = setTimeout( changeTagText, 5000);
+
+    // now for stoping the set time out function
+    //  we have other function called clear timeout
+    // for that we need to store the settimeoutfuctin in a variable and give it as a refernce
+    //    to the cleartimeout like above
+
+    // clearTimeout(stop_change);
+    //  we are assigning the task to the stop button
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(stop_change);
+        alert("the change is stopped");
+    })
+
+
+
+</script>
+</html>

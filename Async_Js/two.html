@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">learning javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    let thetimeoutsaver;
+    // start change function
+    const startchange = ()=>{
+
+       alert("change has begun");
+       thetimeoutsaver= setTimeout(() => {
+            document.querySelector('h1').innerHTML = " finally changed";
+            alert("the change is made ")
+        }, 3000);
+    }
+
+// for start button
+   document.querySelector('#start').addEventListener('click',startchange);
+
+// for stop button
+   const stopIt = ()=>{
+    clearTimeout(thetimeoutsaver);
+    alert("the change is stopped")
+   }
+   document.querySelector('#stop').addEventListener('click',stopIt)
+</script>
+</html>
