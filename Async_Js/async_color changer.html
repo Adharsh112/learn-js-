@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a simple color changer using async javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    // the color code
+    
+    let thecolorcode = function(){
+
+        const ccode = "0123456789abcdef"; //string have items from 0 to 10 and a to f
+        let color = "#";                  // this is the color with tag #
+        for( let i = 0 ;i < 6 ;i++){
+            color += ccode[Math.floor(Math.random()*16)];  //now flling the color variable with elements of hexcode 
+    }
+     return color;  // returning the hex code
+
+    }
+    
+
+    let stopcall;  //global variable for giving the setTimeOut to the stopper function
+     const starter = function(){   // for starting the color changing
+
+      if(stopcall == null){  //this condition make sure that the color changing starts only after stopping it 
+        stopcall = setInterval(() => {   //the set interval for coninues changing
+        document.body.style.backgroundColor = thecolorcode();  //changing the background with thecolorcode function whiic gives color
+           console.log("color changer activated");
+        },1000);
+      }
+     }
+
+     const stopper = function(){  // this function will stop the color changing when the button is clicked
+
+        clearInterval(stopcall);  //for clearing interval
+        stopcall = null;        // making it null so that we know the code is stopped
+        console.log("the  color changer is stopped");
+     }
+
+    // connecting the buttons 
+    document.querySelector('#start').addEventListener('click',starter);//adding start event to the start button and calling starter function
+
+    document.querySelector('#stop').addEventListener('click',stopper);//addubg event to the stop button and calling stopper function
+</script>
+</html>
